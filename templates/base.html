@@ -5,14 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coiny&family=Outfit:wght@100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+ 
+
+input {
+    width: 300px;
+  }
+  body {
+  font-family: "Winky Sans", sans-serif;
+  background-color: rgb(3, 3, 68);
+  overflow-x:hidden ;
+  animation:fadeIn 3s;
+    }
+    label{
+        color:orange;
+        font-size: 18px;
+    }
+    h4{
+        color:orange;
+        text-align: center;
+
+        }
+    h1{
+        color:orange;
+    }
+    h2{
+        color:orange;
+        left:20%;
+    }
+       li{
+        color:white;
+        text-align: center;
+        font-size: 18px;
+    }
+    img{
+        left:0;
+        background-color:red;
+        
+    }
+    hr{
+        color: white;
+        padding:0px 20%;
+        border-width: 3px;
+    }
+    span{
+        color:white;
+        font-size: 23px;
+    }
+    .image{
+        position: relative;
+    }
+    input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+    button{
+        background-color: orange;
+        color:white;
+        padding:5px 10px;
+        border-radius: 12px;
+        width: 150px;
+    }
+    @keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.absol {
+    position: absolute;
+    top: 50%;  /* Center vertically */
+    left: 22%;  /* Center horizontally */
+    transform: translate(-50%, -50%); 
+    color: white;  /* Make text visible */
+    padding: 15px;
+    border-radius: 8px;  /* Optional: rounded corners */
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+    </style>
+
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Cryptocurrency (Bitcoin) Price Predictor</a>
-        </div>
-    </nav>
-    <div class="container mt-4">
+    <div class="image">
+    <img src="https://img.freepik.com/free-vector/cryptocurrency-bitcoin-golden-coin-with-digital-circuit-lines-background_1017-33592.jpg?ga=GA1.1.1042507928.1742992619&semt=ais_hybrid" width="1350" height="600"/>
+    <div class="absol">
+    <h1>CRYPTOCURRENCY PRICE <br/> PREDICTION</h1>
+    <p><span>Below there no of types of coins  and their <br/> ticker codes and there were mnc share ticker<br/> codes also
+        using that tickercodes <br/> your model can predict the future price of coins <br/>in an effective way
+    </span> </p><br/>
+    <button>Get Started</button>
+  </div></div>
+  <br/>
+  <hr/>
+  <h2 style="text-align: center;">List of coins</h2><br/>
+  <div class="row " style="text-align: center;">
+  <div class="col-md-4 col-xs-12">
+      <h4>Pioneer</h4>
+  <ul><li>Bitcoin</li></ul> 
+  <h4>Utility Coins</h4>
+  <ul>
+      <li>Binance Coin : BNB-USD</li>
+      <li>Chain Link : LINK-USD</li>
+      <li>Basic attention token :BAT-USD</li>
+  </ul> </div>
+  <div class="col-md-4 col-xs-12">
+  <h4>Alternative Coins</h4> 
+      <ul>
+          <li>Ethereum : ETH-USD</li>
+          <li>Litecoin : LTC-USD</li>
+          <li>Bitcoin cash :BCH-USD</li>
+          <li>Cardano : ADA-USD</li> 
+          <li>Solana : SOL-USD </li>
+      </ul> </div>
+      <div class="col-md-4 col-xs-12">
+          <h4>Alternative Coins</h4>
+              <ul>
+                  <li>Usd coin: USDC</li>
+              </ul> 
+              <h4>Privacy Coins</h4>
+              <ul>
+                  <li>Monero : XMR-USD</li>
+                  <li>Zcash : ZEC-USD</li>
+              </ul> 
+          </div>
+       
+  </div> <br/> <br/>
+  <div class="second" >
+    <h4>MNC Company share values</h4>
+    <ul>
+      <li>Apple Incorporated : AAPL</li>
+      <li>Microsoft Corporation : MSFT</li>
+      <li>Alphabet Incorporated : GOOGL</li>
+      <li>Amazon : AMZN </li>
+      <li>Meta platform Incorporated: META</li>
+      <li>Tesla Incorporated : TSLA</li>
+    </ul> 
+   </div>
+    <div class="container mt-4 upper">
+        <h2>Prediction</h2><br/>
         {% block content %}{% endblock %}
     </div>
 </body>

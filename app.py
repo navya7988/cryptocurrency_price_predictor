@@ -42,8 +42,9 @@ def predict():
 
     # Fetch Stock Data
     end = datetime.now()
-    start = datetime(end.year - 10, end.month, end.day)
+    start = datetime(end.year - 15, end.month, end.day)
     stock_data = yf.download(stock, start, end)
+    print(stock_data)
     if stock_data.empty:
         return render_template("result.html", error="Invalid stock ticker or no data available.")
 
